@@ -22,6 +22,7 @@ func getConfig(conf config) *socks5.Config {
 
 	return &socks5.Config{
 		AuthMethods: []socks5.Authenticator{authenticator},
+		Rules:       filterTelegram(),
 	}
 }
 
